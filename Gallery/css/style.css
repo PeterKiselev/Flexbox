@@ -172,6 +172,10 @@ main {
     background-image: linear-gradient(to top, rgba(0,0,0,.6), rgba(0,0,0,0));
 }
 
+.article__img--wide {
+    max-width: 100%;
+}
+
 .article__attr--wide {
     color: #fff;
     padding-left: 45px;
