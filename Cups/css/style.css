@@ -1,0 +1,168 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 10px;
+}
+
+@font-face {
+    font-family: 'Miso-Bold';
+    src: url('../fonts/Miso-Bold.eot');
+    src: url('../fonts/Miso-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Miso-Bold.woff2') format('woff2'),
+        url('../fonts/Miso-Bold.woff') format('woff'),
+        url('../fonts/Miso-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Miso-Light';
+    src: url('../fonts/Miso-Light.eot');
+    src: url('../fonts/Miso-Light.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Miso-Light.woff2') format('woff2'),
+        url('../fonts/Miso-Light.woff') format('woff'),
+        url('../fonts/Miso-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: italic;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    font-family: 'Miso-Light', sans-serif;
+    font-size: 2rem;
+    font-weight: 300;
+    color: #333333;
+    line-height: 1.3;
+}
+
+menu {
+    max-width: 1200px;
+    background-color: #fdde7e;
+    display: flex;
+    flex-grow: 1;
+    margin: 0;
+    padding: 50px 0;
+}
+
+.row {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-grow: 1;
+}
+
+.col {
+    width: 30%;
+}
+
+.cup {
+    text-align: center;
+    background-color: #fff;
+    padding: 40px 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    text-decoration: none;
+    color: inherit;
+    transition: all .4s ease-in-out;
+    position: relative;
+}
+
+.cup:hover {
+    background-color: #f8e7d6;
+    box-shadow: inset 0 0 10px 10px #fda248;
+    border-radius: 30px;
+    transition: all .4s ease-in-out;
+    text-shadow: 1px 0px 1px #000;
+}
+
+.cup:hover .cup__title--bronze {
+    color: #e56d00;
+}
+
+.cup:hover .cup__title--gold {
+    color: #e5b524;
+}
+
+.cup:hover .cup__title---silver {
+    color: #bdbdbd;
+}
+
+.cup--gold {
+    min-height: 500px;
+}
+
+.cup__price {
+    font-size: 7rem;
+    color: #02995b;
+    font-family: 'Miso-Bold', sans-serif;
+}
+
+.cup__image img {
+    max-width: 100%;
+}
+
+.cup__title {
+    font-size: 5.6rem;
+    line-height: 1.4;
+}
+
+.cup__text {
+    padding: 0 30%; /* сначала я задал ширину и margin:0 auto; но в какой-то работе ты написала, что так не делать. Думал поставить <br>. В итоге сделал падингами. Или лушче было по-другому?*/
+}
+
+/* === animate === */
+.cup__animated .cup__image1 img{
+    -webkit-animation-play-state: paused;
+    animation-play-state: paused;
+}
+
+.cup__animated:hover  .cup__image--smoke img{
+    -webkit-animation-play-state: running;
+    animation-play-state: running;
+}
+
+.cup__animated:not(:hover) .cup__image--smoke img {
+    display: none;
+}
+
+.cup__animate {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.cup__animate .cup__image--smoke img{
+    -webkit-animation: toTop 3s linear normal infinite;
+    animation: toTop 3s linear normal infinite;
+}
+
+@keyframes toTop {
+    0% {
+        transform: translateY(400%); 
+        opacity: 0;   
+      }
+    50% {
+    transform: translateY(300%);
+    opacity: 1;    
+    }
+    100% {
+      transform: translateY(220%);
+      opacity: 0;    
+    }
+}
+
+.cup__image--cup {
+    position: relative;
+    margin-top: 50px;
+}
+
+
