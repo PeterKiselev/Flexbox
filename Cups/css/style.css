@@ -29,6 +29,7 @@ html {
 }
 
 body {
+    background-color: #fdde7e;
     min-height: 100vh;
     display: flex;
     justify-content: center;
@@ -43,7 +44,6 @@ body {
 
 menu {
     max-width: 1200px;
-    background-color: #fdde7e;
     display: flex;
     flex-grow: 1;
     margin: 0;
