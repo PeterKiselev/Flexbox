@@ -34,6 +34,7 @@ main {
 .container {
     margin: 0 auto;
     max-width: 1140px;
+    padding: 0 15px;
 }
 
 .articles {
@@ -48,10 +49,12 @@ main {
     transition: all .3s ease-in;
 }
 
-.article {
-    width: 100%;
-    /* max-width: 360px; */
+.col {
     flex-basis: 32%;
+}
+
+.article {
+    max-width: 360px;
     height: 540px;
     background-color: #fff;
     margin-bottom: 20px;
@@ -89,7 +92,7 @@ main {
     flex-direction: column;
     justify-content: space-between;
     height: 100%;
-    padding-bottom: 1.15em;
+    padding-bottom: .7em;
     transition: all .3s ease-in;
     position: relative;
 }
@@ -112,11 +115,9 @@ main {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    min-width: 100%;
-    min-height: 100%;
+    width: 100%;
+    height: 100%;
     object-fit: cover;
-    max-height: 100%;
-    max-height: 100%;
 }
 
 .article__attr {
@@ -133,7 +134,7 @@ main {
 }
 
 .article__data:empty + .article__title{
-    margin-top: 2.5em;
+    margin-top: 2.25em;
 }
 
 .article__title {
@@ -156,9 +157,12 @@ main {
 
 
 /* === block wide === */
-.article--wide {
-    /* max-width: 740px;    */
+.col--wide {
     flex-basis: 66%;
+}
+
+.article--wide {
+    max-width: 740px;   
 }
 
 .article__link--wide {
@@ -199,6 +203,7 @@ main {
     font-size: 3rem;
     line-height: 36px;
     padding-right: 8.8em; 
+    max-height: 215px;
 }
 
 .footer {
@@ -210,7 +215,7 @@ main {
 }
 
 .footer__icon {
-    font-size: 3rem;
+    font-size: 2.3emem;
     margin-right: .7em;
     vertical-align: middle;
     animation-name: animation;
