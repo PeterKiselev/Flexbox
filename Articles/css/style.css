@@ -49,13 +49,8 @@ main {
     transition: all .3s ease-in;
 }
 
-.col {
-    flex-basis: 32%;
-}
-
 .article {
-    max-width: 360px;
-    height: 540px;
+    flex-basis: 32%;
     background-color: #fff;
     margin-bottom: 20px;
     overflow: hidden;
@@ -86,12 +81,13 @@ main {
 }
 
 .article__link {
+    max-width: 360px;
+    height: 540px;
     text-decoration: none;
     color: inherit;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 100%;
     padding-bottom: .7em;
     transition: all .3s ease-in;
     position: relative;
@@ -157,15 +153,12 @@ main {
 
 
 /* === block wide === */
-.col--wide {
-    flex-basis: 66%;
-}
-
 .article--wide {
-    max-width: 740px;   
+    flex-basis: 66%;   
 }
 
 .article__link--wide {
+    max-width: 740px;
     padding: 0;
 }
 
